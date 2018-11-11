@@ -162,25 +162,27 @@ $(document).ready(function () {
 <li><a href="#porque-usar-r-en-epidemiologia">Porqué usar R en Epidemiología</a></li>
 <li><a href="#pre-requisitos-para-este-curso">Pre-requisitos para este curso</a></li>
 </ul></li>
-<li><a href="#ambientes">Ambientes</a></li>
-<li><a href="#estructuras">Estructuras</a><ul>
+<li><a href="#instalacion-de-r-y-rstudio">Instalación de R y RStudio</a></li>
+<li><a href="#estructuras-basicas-en-r">Estructuras básicas en R</a><ul>
 <li><a href="#vectores-atomicos">Vectores atómicos</a></li>
 <li><a href="#matrices">Matrices</a></li>
 <li><a href="#arrays">Arrays</a></li>
 <li><a href="#dataframes">Dataframes</a></li>
 <li><a href="#listas">Listas</a></li>
 </ul></li>
+<li><a href="#funciones">Funciones</a></li>
+<li><a href="#paquetes-en-r">Paquetes en R</a></li>
+<li><a href="#ambientes">Ambientes</a></li>
 <li><a href="#lecturas-recomendadadas">Lecturas Recomendadadas</a></li>
 </ul>
 </div>
 
 <div id="introduccion" class="section level1">
 <h1>Introducción</h1>
-<p>En este capitulo trataremos los temas de sintaxis y estructiras en R.</p>
-<p><strong><em>Qué es R</em></strong> se refiere a los diferentes ambientes que encontramos en R y que permite que ciertas funciones actuen o no en algunos de ellos.</p>
-<p><strong><em>Ambientes</em></strong> se refiere a los diferentes ambientes que encontramos en R y que permite que ciertas funciones actuen o no en algunos de ellos.</p>
+<p>En este capitulo trataremos los temas de sintaxis y estructuras en R.</p>
 <p><strong><em>Estructuras</em></strong> se refiere al tipo de elementos que podemos encontrar en R: vectores, matrices, dataframes, funciones, entre otros.</p>
 <p><strong><em>Sintaxis</em></strong> se refiere a las reglas generales de cómo escribir comandos, condicionales, loops, funciones, entre otros.</p>
+<p><strong><em>Ambientes</em></strong> se refiere a los diferentes ambientes que encontramos en R y que permite que ciertas funciones actúen o no en algunos de ellos.</p>
 <div id="que-es-r" class="section level2">
 <h2>Qué es R?</h2>
 <p>R es un software libre que permite realizar diversas tareas relacionadas con la ciencia de datos, las cuales incluyen entre otras: - Manejo y organización de datos</p>
@@ -190,26 +192,26 @@ $(document).ready(function () {
 <li><p>Reportes automatizados</p></li>
 <li><p>Páginas Web</p></li>
 <li><p>Visualización estática</p></li>
-<li><p>Visaulizacion dinámica para plataformas interactivas de visualización como ShinyApp</p></li>
+<li><p>Visualización dinámica para plataformas interactivas de visualización como ShinyApp</p></li>
 <li><p>Interacción con otros lenguajes de programación (SQL, Bash, Phyton, C++, Stan, entre otros)</p></li>
 <li><p>Programación en equipo</p></li>
 </ul>
-<p>En resumen, los usos de R son diversos y crecientes en la medida en que se trata de un softare de programacion libre donde cualquier persona puede contribuir construyendo nuevos usos los cuales son de accesso libre.</p>
+<p>En resumen, los usos de R son diversos y crecientes en la medida en que se trata de un software de programación libre donde cualquier persona puede contribuir construyendo nuevos usos los cuales son de acceso libre.</p>
 </div>
 <div id="porque-usar-r-en-epidemiologia" class="section level2">
 <h2>Porqué usar R en Epidemiología</h2>
-<p>Hay una lista creciente de razones para usar R, listaré a continuación las cuatro razones que personalmente considero son las mas importantes y que están inter-conectadas:</p>
+<p>Hay una lista creciente de razones para usar R, listaré a continuación las cuatro razones que personalmente considero son las mas importantes y que están ínter-conectadas:</p>
 <ol style="list-style-type: decimal">
-<li><p><em>Acceso libre</em>: La disponibilidad de datos en fuentes de acceso libre es creciente. Igualmente la disponibilidad de datos en general, lo cual hace que incrementalmente vamos a requerir herramientas, habilidades que de forma rutinaria nos permiten ingreso y manipulacion de datos de multiples fuentes de información.</p></li>
-<li><p><em>Automatización</em>: R permite un flujo de tranajo adecuado para la implementacion de rutinas de analiss, las cuales una vez estandarizadas pueden ser usadas para analisis repetitivos (rutinarios) o facilmente adaptados para otras situaciones.</p></li>
-<li><p><em>Teconología de punta</em>: el número y calidad de paquetes de análisis estadistico y epidemiológico en varios lenguajes de programación crece todos los días, y así mismo nos vemos en la necesiad imperiosa de estar al dia en la teconologia mas relevante para la epidemiología y análisis en salud. <em>R</em> permite interaccioón con multiples lenguajes de programacion y por lo tanto es una primera puerta a muchas posibilidades y exploración de varias teconologías de análisis.</p></li>
-<li><p><em>Reproducibilidad</em> la transparencia en el analisis de datos es de creciente importancia en nuestra area. La posibildiad de que los resulatdos que obtenemos sean tan claros que oros investigadores puedan facimente reproducirlos y mejorarlos es un aspecto clave para el avance de la epidemiología.</p></li>
+<li><p><em>Acceso libre</em>: La disponibilidad de datos en fuentes de acceso libre es creciente. Igualmente la disponibilidad de datos en general, lo cual hace que incrementalmente vamos a requerir herramientas, habilidades que de forma rutinaria nos permiten ingreso y manipulación de datos de múltiples fuentes de información.</p></li>
+<li><p><em>Automatización</em>: R permite un flujo de trabajo adecuado para la implementación de rutinas de analistas, las cuales una vez estandarizadas pueden ser usadas para análisis repetitivos (rutinarios) o fácilmente adaptados para otras situaciones.</p></li>
+<li><p><em>Teconología de punta</em>: el número y calidad de paquetes de análisis estadístico y epidemiológico en varios lenguajes de programación crece todos los días, y así mismo nos vemos en la necesidad imperiosa de estar al día en la tecnología mas relevante para la epidemiología y análisis en salud. <em>R</em> permite interacción con múltiples lenguajes de programación y por lo tanto es una primera puerta a muchas posibilidades y exploración de varias tecnologías de análisis.</p></li>
+<li><p><em>Reproducibilidad</em> la transparencia en el análisis de datos es de creciente importancia en nuestra área. La posibilidad de que los resultados que obtenemos sean tan claros que oros investigadores puedan facilmente reproducirlos y mejorarlos es un aspecto clave para el avance de la epidemiología.</p></li>
 </ol>
 </div>
 <div id="pre-requisitos-para-este-curso" class="section level2">
 <h2>Pre-requisitos para este curso</h2>
-<p>En mi experiencia personal, las caracteristicas maás importantes para aprender un lenguaje de programación sin caer en la frustacioón son: <em>dedicación</em> y <em>atención a los detalles</em>. La fluencia llegará con la práctica y el tiempo.</p>
-<p>Aunque no existen pre-requisitos como tal, algunos de los conocimientos previos que ayudarán a avanzar más rapidamente en los contenidos de este curso son en su orden:</p>
+<p>En mi experiencia personal, las características más importantes para aprender un lenguaje de programación sin caer en la frustración son: <em>dedicación</em> y <em>atención a los detalles</em>. La fluencia llegará con la práctica y el tiempo.</p>
+<p>Aunque no existen pre-requisitos como tal, algunos de los conocimientos previos que ayudarán a avanzar más rápidamente en los contenidos de este curso son en su orden:</p>
 <ol style="list-style-type: decimal">
 <li><p>Conocimientos básicos de estadística y matemática. A más conocimiento mejor!</p></li>
 <li><p>Experiencia en otro lenguaje de programación</p></li>
@@ -218,31 +220,22 @@ $(document).ready(function () {
 </ol>
 </div>
 </div>
-<div id="ambientes" class="section level1">
-<h1>Ambientes</h1>
-<p>Cuando estamos en una sesión de R es muy importante entender el ambiente en que nos encontramos. Hay tres tipos de ambientes:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Ambiente global</strong>: este ambiente es el que encontramos por defecto cuando abrimos una sesión nueva en R. El ambiente incluye: funciones, vextores, matrices, daf=taframes, y tambien los programos instalados y requeridos para esa sesión.</li>
-</ol>
-<p>Facilmente podemos observar en qué ambiente nos econtramos, usando el comando <em>envronment</em> en la consola:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">environment</span>()</code></pre></div>
-<pre><code>## &lt;environment: R_GlobalEnv&gt;</code></pre>
-<p>En este caso el sistema nos indica que estamos en el <em>ambiente global</em> o <em>R_GlobalEnv</em></p>
-<p><strong>. </strong></p>
-<ol start="2" style="list-style-type: decimal">
-<li><strong>Ambiente de la función</strong>: este ambiente solo lo podemos observar cuando vemos la función por dentro. Veamos una funcion base de <em>R</em> usando la misma funcion <em>environment</em></li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">environment</span>(mean)</code></pre></div>
-<pre><code>## &lt;environment: namespace:base&gt;</code></pre>
+<div id="instalacion-de-r-y-rstudio" class="section level1">
+<h1>Instalación de R y RStudio</h1>
+<p><em>R</em> es el el software base y <em>RStudio</em> es una interface que se ha creado para trabajar en R de una forma más amigable e intuitiva en especial para personas que no somos programadores de base.</p>
+<p>Cada uno de estos programas deben instalarse por separado y según corresponda al computador en el cual se va a trabajar.</p>
+<p>Para instalar <em>R</em> hay que hacerlo desde la pagina de CRAN: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
+<p>Para instalar <em>RStudio</em> se hace desde su página. La versión <em>free</em> es perfectamente suficiente para trabajar en <em>R</em>: <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a></p>
+<p>Una vez ambos estén instalados, el programa se abre desde <em>RStudio</em> y desde allí podemos empezar a abrir una sesioón de <em>R</em>.</p>
 </div>
-<div id="estructuras" class="section level1">
-<h1>Estructuras</h1>
-<p>Existen tres tipos basicos de estructuras en R:</p>
+<div id="estructuras-basicas-en-r" class="section level1">
+<h1>Estructuras básicas en R</h1>
+<p>Existen tres tipos básicos de estructuras en R:</p>
 <ul>
-<li><p>Homogeneas: vectores atómicos, matrices, arrays</p></li>
-<li><p>Heterogeneas: dataframes y listas</p></li>
+<li><p>Homogéneas: vectores atómicos, matrices, arrays</p></li>
+<li><p>Heterogéneas: dataframes y listas</p></li>
 </ul>
-<p>Veamos cada una de estas estructuras en maás detalle</p>
+<p>Veamos cada una de estas estructuras en más detalle</p>
 <div id="vectores-atomicos" class="section level2">
 <h2>Vectores atómicos</h2>
 <p>Estas son las estructuras más sencillas de R y son de tres tipos:</p>
@@ -279,7 +272,7 @@ d &lt;-<span class="st"> </span><span class="kw">c</span>(1L, 2L, 3L, 4L)</code>
 </div>
 <div id="matrices" class="section level2">
 <h2>Matrices</h2>
-<p>Las matrices corresponden a estructuras un poco mas complejas. Como catacteristicas principales:</p>
+<p>Las matrices corresponden a estructuras un poco mas complejas. Como características principales:</p>
 <ul>
 <li><p>Una matriz está compuesta de vectores de un solo tipo</p></li>
 <li><p>Una matriz solo tiene dos dimensiones</p></li>
@@ -324,7 +317,7 @@ Md</code></pre></div>
 </div>
 <div id="dataframes" class="section level2">
 <h2>Dataframes</h2>
-<p>Un <em>dataframe</em> es la estructura bidimensional, similar a una matrix, pero cuyos componentes pueden ser diversos.</p>
+<p>Un <em>dataframe</em> es la estructura bidimensional, similar a una matriz, pero cuyos componentes pueden ser diversos.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Data frame</span>
 r &lt;-<span class="st"> </span><span class="kw">data.frame</span>(a, b)
 s &lt;-<span class="st"> </span><span class="kw">data.frame</span>(r, c, d)
@@ -342,7 +335,7 @@ r[<span class="dv">2</span>] <span class="co"># [] returns the second component 
 </div>
 <div id="listas" class="section level2">
 <h2>Listas</h2>
-<p>Un <em>lista</em> es la estructura más compleja que existe, y puede estar compuesta de todas las estructuras anteriores. Una lista permite manejar grandes cantidades de elementos y son estructuras muy utiles.</p>
+<p>Un <em>lista</em> es la estructura más compleja que existe, y puede estar compuesta de todas las estructuras anteriores. Una lista permite manejar grandes cantidades de elementos y son estructuras muy útiles.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Data frame</span>
 r &lt;-<span class="st"> </span><span class="kw">data.frame</span>(a, b)
 s &lt;-<span class="st"> </span><span class="kw">data.frame</span>(r, c, d)
@@ -376,12 +369,70 @@ ll[<span class="dv">1</span>] <span class="co"># [1] returns the first component
 ##  $ b: logi  TRUE FALSE FALSE TRUE</code></pre>
 </div>
 </div>
+<div id="funciones" class="section level1">
+<h1>Funciones</h1>
+<p>Una función es una de las características más importante de la programación en R. Una función es un objeto más en <em>R</em>, el cual creamos mediante el comando <em>function</em>.</p>
+<p>Las funciones se dividen en:</p>
+<ul>
+<li><p>Funciones base: son las funciones que están por defecto en <em>R</em>. Por ejemplo la suma <em>sum</em>, la multiplicación _*_, la mediana <em>median</em>, o incluso otras más complejas como el resumen básico de estadísticas <em>summary</em>.</p></li>
+<li><p>Funciones en paquetes: son las funciones que vienen cuando instalamos un paquete de R el cual no es base de R.</p></li>
+<li><p>Funciones propias: son las funciones que creamos a nuestro gusto para realizar algún análisis en que estemos interesados.</p></li>
+</ul>
+<p>Los componentes básicos de una función son:</p>
+<ul>
+<li><em>nombre:</em> es el nombre que le damos a la función (ejemplo: <em>my.fun</em>)</li>
+</ul>
+<p>_ <em>input o argumento:</em>: es la serie de elementos que necesito modificar mediante la función.</p>
+<p>_ <em>cuerpo:</em> es la serie de operaciones o modificaciones que realizo al argumento. El cuerpo puede contener un modelo de análisis por ejemplo.</p>
+<p><em>output:</em> es el resultado de aplicar la función. Si el output es un valor o serie de valores específicos los puedo especificar mediante la función <em>return</em>.</p>
+<p><em>environment:</em> es el ambiente que se crea dentro de la función que hace que no vaya al ambiente global. Este tema lo explicaré en más detalle abajo:</p>
+<p>Veamos la estructura básica de una función mediante un ejemplo extremadamente sencillo para calcular el Indica de Masa Corporal a partir del peso y la talla:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my.fun &lt;-<span class="st"> </span><span class="cf">function</span>(peso, talla){
+  IMC      &lt;-<span class="st"> </span>peso<span class="op">/</span>talla<span class="op">^</span><span class="dv">2</span>
+  unidades &lt;-<span class="st"> 'kg/m2'</span>
+  output &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="kw">round</span>(IMC,<span class="dv">1</span>), unidades)
+  
+  <span class="kw">return</span>(output) 
+}
+
+<span class="kw">my.fun</span>(<span class="dt">peso =</span> <span class="dv">50</span>, <span class="dt">talla =</span> <span class="fl">1.5</span>)</code></pre></div>
+<pre><code>## [1] &quot;22.2 kg/m2&quot;</code></pre>
+</div>
+<div id="paquetes-en-r" class="section level1">
+<h1>Paquetes en R</h1>
+<p>Un paquete de R es simplemente un conjunto de funciones organizado de tal manera que podemos utilizar estas funciones sin necesidad de hacerlas nosotros mismos. Para instalar paquetes nuevos solo necesitamos utilizar el comando <em>install.packages</em>.</p>
+<p>Veamos a manera de ejemplo coómo instalar el paquete <strong>readxl</strong> el cual permite leer archivos de excel en <em>R</em>.</p>
+<p>Primero podemos revisar de qué se trata el paquete en la página de CRAN: <a href="https://cran.r-project.org/web/packages/readxl/index.html" class="uri">https://cran.r-project.org/web/packages/readxl/index.html</a>.</p>
+<p>Ahora instalemos el paquete.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">'readxl'</span>)
+<span class="kw">library</span>(readxl)</code></pre></div>
+</div>
+<div id="ambientes" class="section level1">
+<h1>Ambientes</h1>
+<p>Cuando estamos en una sesión de R es muy importante entender el ambiente en que nos encontramos. Hay tres tipos de ambientes:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Ambiente global</strong>: este ambiente es el que encontramos por defecto cuando abrimos una sesión nueva en R. El ambiente incluye: funciones, vectores, matrices, daf=dataframes, y también los programas instalados y requeridos para esa sesión.</li>
+</ol>
+<p>Fácilmente podemos observar en qué ambiente nos encontramos, usando el comando <em>environment</em> en la consola:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">environment</span>()</code></pre></div>
+<pre><code>## &lt;environment: R_GlobalEnv&gt;</code></pre>
+<p>En este caso el sistema nos indica que estamos en el <em>ambiente global</em> o <em>R_GlobalEnv</em></p>
+<p><strong>. </strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Ambiente de la función</strong>: este ambiente solo lo podemos observar cuando vemos la función por dentro. Veamos una función base de <em>R</em> usando la misma función <em>environment</em></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">environment</span>(mean)</code></pre></div>
+<pre><code>## &lt;environment: namespace:base&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">environment</span>(my.fun)</code></pre></div>
+<pre><code>## &lt;environment: R_GlobalEnv&gt;</code></pre>
+</div>
 <div id="lecturas-recomendadadas" class="section level1">
 <h1>Lecturas Recomendadadas</h1>
+<p>Algunos recursos que recomiendo son:</p>
 <ul>
 <li>El arte de programar en R (Básico)</li>
 </ul>
-<p>Este libro contiene las herramientas más importantes para programación básica en R. Es muy sencillo y creo que de hecho se puede terminar todo completo en unas poquitas horas. <a href="https://cran.r-project.org/doc/contrib/Santana_El_arte_de_programar_en_R.pdf" class="uri">https://cran.r-project.org/doc/contrib/Santana_El_arte_de_programar_en_R.pdf</a></p>
+<p>Este libro contiene las herramientas más importantes para programación básica en R. Es muy sencillo y creo que de hecho se puede terminar todo completo en unas pocas horas. <a href="https://cran.r-project.org/doc/contrib/Santana_El_arte_de_programar_en_R.pdf" class="uri">https://cran.r-project.org/doc/contrib/Santana_El_arte_de_programar_en_R.pdf</a></p>
 <ul>
 <li>Estadística básica en R</li>
 </ul>
@@ -389,7 +440,7 @@ ll[<span class="dv">1</span>] <span class="co"># [1] returns the first component
 <ul>
 <li>RStudio basics (video)</li>
 </ul>
-<p>Este video está en inglés, pero toca temas básicos de R y RStudio (instalación, estructura de RStudio) y aspectos de sintaxis (estructuras, condicionales, loops, funciones, etc) que son ejercicios básicos de programación de forma muy didáctica. Es muy sencillo y dura 1 hora pero una persona puede pasar varias horas hasta hacer todos los ejercicios. <a href="https://www.youtube.com/watch?v=fDRa82lxzaU" class="uri">https://www.youtube.com/watch?v=fDRa82lxzaU</a></p>
+<p>Este vídeo está en inglés, pero toca temas básicos de R y RStudio (instalación, estructura de RStudio) y aspectos de sintaxis (estructuras, condicionales, loops, funciones, etc) que son ejercicios básicos de programación de forma muy didáctica. Es muy sencillo y dura 1 hora pero una persona puede pasar varias horas hasta hacer todos los ejercicios. <a href="https://www.youtube.com/watch?v=fDRa82lxzaU" class="uri">https://www.youtube.com/watch?v=fDRa82lxzaU</a></p>
 <ul>
 <li>R for Data Science</li>
 </ul>
