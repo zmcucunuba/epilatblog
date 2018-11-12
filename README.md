@@ -1,3 +1,3 @@
 # zulmacucunuba.github.io
 website
-A page for some tuorials in Spanish
+page for some materials in Spanish
